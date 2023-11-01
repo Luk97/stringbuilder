@@ -142,7 +142,7 @@ char *sb_trimright(char *s) {
     *(trim+1) = '\0';
     return s;
 }
-char *sb_findstr(char *s, const char *substr) {
+char *sb_find(char *s, const char *substr) {
     char *search = s;
 
     while (*search != '\0') {
@@ -165,7 +165,7 @@ char *sb_findchar(char *s, char c) {
     return NULL;
 }
 
-size_t sb_countstr(char *s, const char *substr) {
+size_t sb_count(char *s, const char *substr) {
     char *search = s;
     size_t count = 0;
     
@@ -191,7 +191,7 @@ size_t sb_countchar(char *s, char c) {
     return count;
 }
 
-char *sb_replace_str(char *string, const char *old_substring, const char *new_substring) {
+char *sb_replace(char *string, const char *old_substring, const char *new_substring) {
     char *s = string;
     size_t old_string_len = sb_strlen(old_substring);
     size_t new_string_len = sb_strlen(new_substring);
@@ -220,7 +220,7 @@ char *sb_replace_str(char *string, const char *old_substring, const char *new_su
                 }
 
             } else if (old_string_len < new_string_len) {
-                size_t size_diff = old_string_len - new_string_len;
+                //size_t size_diff = old_string_len - new_string_len;
                 for (size_t i = 0; i < old_string_len; ++i) {
                     *s = new_substring[i];
                     s++;

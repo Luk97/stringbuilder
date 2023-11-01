@@ -71,13 +71,13 @@ char *sb_trim(char *s);
 char *sb_trimleft(char *s);
 char *sb_trimright(char *s);
 
-char *sb_findstr(char *s, const char *substr);
+char *sb_find(char *s, const char *substr);
 char *sb_findchar(char *s, char c);
 
-size_t sb_countstr(char *s, const char *substr);
+size_t sb_count(char *s, const char *substr);
 size_t sb_countchar(char *s, char c);
 
-char *sb_replace_str(char *string, const char *old_substring, const char *new_substring);
+char *sb_replace(char *string, const char *old_substring, const char *new_substring);
 char *sb_replace_char(char *string, char old_char, char new_char);
 
 // TODO: think about overall syntax: sb_findstr or sb_find_str or sb_findStr ??? and about param names
